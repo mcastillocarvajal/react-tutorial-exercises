@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 const Alert = props => {
 	//add the condition inside this function
 
-	return (
+	return props.show === false ? null : (
 		<div className="alert alert-danger" role="alert">
-			This is a primary alert-check it out!
+			{props.text}
 		</div>
 	);
 };
